@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red5\green99\blue193;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0
+
+\f0\fs28 \cf0 ****************************************************\
+Ahmed Mousa		0927129\
+CIS 1500		         Assignment 1\
+October 15/2015\
+****************************************************\
+\
+\
+************\
+Compilation\
+************\
+To compile this program execute the following command:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0
+\cf0 gcc a1PIG.c -o a1PIG -Wall -std=c99 -pedantic\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0
+\cf0 ***********************\
+Running the program(s)\
+***********************\
+To run the program type the following command from the root directory of the assignment:\
+./a1PIG\
+\
+\
+*****************\
+Known Limitations\
+*****************\
+this program has quite a few limitations since it has no error checking. Some of the limitations are:\
+- If the user enters a negative value or a float number for the game total then the program will not run as intended\
+- The same goes for when the user enters an alphabet letter other than the intended ones (r,h). The program will continue to ask wether the user wants to roll/hold. \
+\pard\pardeftab720\ri0
+\cf0 - Another cause that could break the program is if the user enters multiple letters at the same time instead of just r or just h. If the user enters r more than once, the program rolls the dice as much as how many r\'92s were entered by the user.\
+\
+****************\
+Information about the random number generator function was obtained from the website:\
+\pard\pardeftab720\ri0
+{\field{\*\fldinst{HYPERLINK "https://bucky.socs.uoguelph.ca/mod/assign/view.php?id=971"}}{\fldrslt \cf2 \ul \ulc2 https://bucky.socs.uoguelph.ca/mod/assign/view.php?id=971}}\
+(document called helpRandNum.pdf)\
+}
