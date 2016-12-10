@@ -1,0 +1,6 @@
+15X10 dn0 de7 dw8 ds8 h3,1
+18X23 dn0 ds0 de0 dw0 W10,3 g3,3 g4,4 g3,1 g0,3 m1,3 m5,5 g4,5 g8,2 g8,3  
+13X10 dn0 ds0 de0 dw0 a4,4 e1,2 w1,3 
+10X9 dn0 ds0 de0 dw0 g1,3 g4,5 e1,2 p4,1 z2,1 
+11X5 dn0 ds0 de0 dw0 G8,3 m2,1
+15X20 g1,2 g5,8 g1,3 M3,3 g5,1 g4,1 g3,1 g3,2 ds6 dn1 de4 dw1

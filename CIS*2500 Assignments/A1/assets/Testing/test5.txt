@@ -1,0 +1,6 @@
+recipName=Fork
+friend=Cup
+sonName=Spork
+feature=hair
+sendName=Spoon
+
