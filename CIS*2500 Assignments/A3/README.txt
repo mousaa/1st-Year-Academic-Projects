@@ -1,12 +1,59 @@
-Welcome to the School of Computer Science GIT
+****************************************************
+Ahmed Mousa		0927129
+CIS 2500		Assignment 3
+March 13/2016
+****************************************************
 
-In order to make using GIT easier for users acustomed to SVN, the following chart with SVN and GIT commands has been provided.
 
-SVN/GIT Command Chart:
+***********************
+Running the program(s)/Usage
+***********************
+To run the program type the following command from the root directory of the assignment:
+make run
 
-SVN Command		| GIT Command
-========================|==========================
-svn checkout		| git clone
-svn update		| git pull
-svn add file		| git add file
-svn commit		| git commit -a followed by git push
+Program will scan level file for room dimensions and position of elements then move to ncurses to print all the rooms and initialize the game movement. 
+
+***********************
+Testing
+***********************
+The following files have been tested in order to minimize and identify errors in the program:
+1. assets/Testing/1.txt:
+   Used to check that the hallways will print no matter what size of rooms/ position of doors is given
+
+2. assets/Testing/2.txt:
+   Used to make sure program can handle an empty file with just room dimensions.
+
+3. assets/Testing/3.txt:
+   Used to make sure program can handle atleast one monster movement.
+   
+
+*****************
+Known Limitations
+*****************
+This program has quite a few limitations even though it has error checking. Some of the limitations are:
+- Hero can’t step on doors located on corners
+- If user doesn’t press the correct input to move(w,a,s,d) the hero just disappears, cursor is still on the same place (monsters still move).
+- Program simply exits if the rooms in level file wont fit on the terminal screen. 
+- If level file has more than 10 items(excluding door and room dimensions) program behaves strangely, and could possibly cause a segfault.
+
+- Program assumes that level file will follow specification. (i.e 1 big gold to track, file line is not greater than 150)
+
+- if 2 items are in the same spot in the room, the item that is read last in the level file will overwrite the other one
+
+- program assumes that once hero steps on door to enter hallway or exit hallway they will proceed as such and not go back in the hallway/room. If for for example, hero steps on door to enter hallway, but decides to go back, a dot will be printed instead of a door. When hero goes back in the hallway though, everything will be fixed.
+
+- COMBAT is VERY buggy unfortunately
+	- basic collision detection for monsters was implemented(i.e doors, walls, hero)
+	- hero and monsters can step on same spot, monster will disappear if this happens until hero moves out of that monsters cycle
+	- snake and bat combat prints out unusual/unwanted messages and extra characters for an unknown reason
+	- if 2 monsters are the same in one room, once hero kills 1 the other also stops its cycle
+	- if 2 monsters are the same in one room, a single combat with one followed with another combat with the other monster could potentially make the program loose track of the enemy stats for the other monster
+	- program has no decision when hero and monster’s cycle collide(hero prioritizes if is synced with the monsters cycle)
+	- Users can still use any other key to move the monsters in order to ensure a collision with the hero(other than w,s,a,d) 
+     
+****************
+References
+****************
+
+No references other than professor Justin’s lectures were used for this assignment.
+- NOTE: Reused functions, code from A2 CIS*2500 W16, modified slightly to meet criteria of this project.
